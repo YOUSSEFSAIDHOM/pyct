@@ -47,5 +47,5 @@ It will automatically give a name if you don't specify
 ### Installation 📦
 
 ```
-pip install pyct
+pip install pycli-trials==0.1.0
 ```
