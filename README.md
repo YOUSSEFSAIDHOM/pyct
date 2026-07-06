@@ -8,7 +8,7 @@ PyCT is a python wrapper for the ClinicalTrials.org API (v2). Although a python-
 ### Basic usage 🪛
 Get started with:
 ```python
-from pyct import ClinicalTrials
+from pycli-trials import ClinicalTrials
 
 ct = ClinicalTrials()
 ```
