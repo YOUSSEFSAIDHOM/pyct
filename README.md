@@ -37,11 +37,11 @@ study = ct.get_study("NCT06210035")
 and finally you can export with the following options below:
 
 ```python
-ct.to_csv(df, "alzheimer_trials.csv") # CSV
+ct.to_csv(df, "studies.csv") # CSV
 
-ct.to_excel(df, "alzheimer_trials.xlsx") # Excel
+ct.to_excel(df, "studies.xlsx") # Excel
 
-ct.to_json(df, "alzheimer_trials.json") # JSON
+ct.to_json(df, "studies.json") # JSON
 ```
 It will automatically name your file if you can't be bothered to think of one
 ### Installation 📦
