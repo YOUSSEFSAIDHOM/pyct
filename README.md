@@ -43,7 +43,7 @@ ct.to_excel(df, "alzheimer_trials.xlsx") # Excel
 
 ct.to_json(df, "alzheimer_trials.json") # JSON
 ```
-It will automatically give a name if you don't specify
+It will automatically name your file if you can't be bothered to think of one
 ### Installation 📦
 
 ```
