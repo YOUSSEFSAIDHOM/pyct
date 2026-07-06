@@ -25,8 +25,8 @@ Fetching studies:
 # Specify each field
 
 df = ct.get_studies(
-    condition="Dementia",
-    intervention="Non-pharmacological",
+    condition="Covid-19",
+    intervention="vaccine",
     status="RECRUITING"
 )
 
