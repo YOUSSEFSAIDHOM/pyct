@@ -1,5 +1,5 @@
 
-# PyCT 🧬 (v0.1.0)
+# Pycli-trials 🧬 (v0.1.0)
 
 ### About 💭
 
