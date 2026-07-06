@@ -49,5 +49,3 @@ It will automatically give a name if you don't specify
 ```
 pip install pyct
 ```
-v0.1.0
-

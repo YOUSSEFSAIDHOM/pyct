@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 from tqdm import tqdm
 import datetime
-from utils import get_with_retry
+from .utils import get_with_retry
 
 
 class ClinicalTrials:
@@ -60,7 +60,7 @@ class ClinicalTrials:
             page_size (int) : Number of results per page (max 1000). Defaults to 1000.
 
         Returns:
-            A pandas data frame
+            A requests.Response
         """
 
         params = {"format":"json", "pageSize":page_size}
@@ -114,7 +114,7 @@ class ClinicalTrials:
             params (dict) : Query parameters to send with each request
 
         Returns:
-            A pandas dataframe, all pages combined.
+            A requests.Response
         """
 
         all_dfs = []
@@ -150,7 +150,13 @@ class ClinicalTrials:
     # ---------------------------- #
 
     def to_csv(self, df, filename=None):
+        """
+        Usage:
+            df = ClinicalTrials().get_studies(...
+            ClinicalTrials().to_csv(df, "name.csv")
 
+        Generates a name automatically if you can't come up with one
+        """
         if not filename:
             filename = f"studies_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 
@@ -158,7 +164,13 @@ class ClinicalTrials:
         print(f"{len(df)} saved to {filename}")
 
     def to_excel(self, df, filename=None):
+        """
+        Usage:
+            df = ClinicalTrials().get_studies(...
+            ClinicalTrials().to_excel(df, "name.xlsx")
 
+        Generates a name automatically if you can't come up with one
+        """
         if not filename:
             filename = f"studies_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
 
@@ -166,6 +178,13 @@ class ClinicalTrials:
         print(f"{len(df)} saved to {filename}")
 
     def to_json(self, df, filename=None, indent=2):
+        """
+        Usage:
+            df = ClinicalTrials().get_studies(...
+            ClinicalTrials().to_json(df, "name.json")
+
+        Generates a name automatically if you can't come up with one
+        """
         if not filename:
             filename = f"studies_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
